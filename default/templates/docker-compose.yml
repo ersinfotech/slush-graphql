@@ -1,0 +1,10 @@
+node:
+  build: .
+  working_dir: /app
+  volumes:
+    - .:/app
+  environment:
+    - LOCAL_USER_ID=$UID
+  ports:
+    - "$PORT:3000"
+  command: npm start
